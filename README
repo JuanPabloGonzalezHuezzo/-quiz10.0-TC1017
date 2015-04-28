@@ -1,0 +1,32 @@
+# -quiz10.0-TC1017
+#include <iostream>
+using namespace std;
+
+int findThrees(int arr[], int array_size){
+	int x= array_size;
+
+	int suma=0;
+
+	for (int i=0; i<x; i++){
+		cout << "Introduce el numero siguiente (del arreglo)" << endl;
+		cin >> arr[i];
+			if ((arr[i]%3)==0){
+				suma = suma + arr[i];
+			}
+	}
+	return suma;
+}
+
+int main(){
+
+	int x;
+
+	cout << "Introduce el tamaño del arreglo" << endl;
+	cin >> x;
+
+	int arr[x];
+
+	cout << "La suma de los numeros divisibles entre tres es: " << findThrees(arr, x) << endl;
+
+	return 0;
+}
